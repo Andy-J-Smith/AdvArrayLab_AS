@@ -123,19 +123,19 @@ let dishes = [
 //1. Create a function that will return all dishes with the cuisine type of "vegetarian"
 //Filter
 
-// function problemOne() {
-//   let results = dishes.filter(function (el) {
-//     if (el.cuisine === "Vegetarian") {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   });
+function problemOne() {
+  let results = dishes.filter(function (el) {
+    if (el.cuisine === "Vegetarian") {
+      return true;
+    } else {
+      return false;
+    }
+  });
 
-//   return results;
-// }
-// let vegetarianFood = problemOne();
-// console.log("Vegetarian Foods: ", vegetarianFood);
+  return results;
+}
+let vegetarianFood = problemOne();
+console.log("Vegetarian Foods: ", vegetarianFood);
 
 //2. Create a function that will return all dishes with the cuisine type of "Italian" and
 //  a serving size greater than 5.
@@ -218,10 +218,7 @@ console.log("Cuisine Types", problemSixResult);
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
-// let dupCuisineList = dishes.filter((c, index) => {
-//   return dishes.cuisine.indexOf(c) !== index;
-// });
-// console.log(dupCuisineList);
+
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
 
@@ -240,11 +237,13 @@ console.log("Cuisine with dish name:", problemSevenResult);
 //Map, Filter
 
 function problemEight() {
-  let veggieDish = dishes.map(function (el) {
-    if (el.cuisine == "Vegetarian") {
+  let veggieDish = dishes
+    .filter(function (el) {
+      return el.cuisine === "Vegetarian";
+    })
+    .map(function (el) {
       return el.cuisine + " " + el.name;
-    }
-  });
+    });
   return veggieDish;
 }
 let problemEightResult = problemEight();
