@@ -178,7 +178,7 @@ console.log(evenDishes);
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
 let tomCheese = dishes.filter(function (el) {
-  if (el.ingredients.includes("tomato" && "cheese")){
+  if (el.ingredients.includes("tomato") && el.ingredients.includes("cheese")) {
     return true;
   }
 });
@@ -187,15 +187,33 @@ console.log(tomCheese);
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
 
+let cuisineList = dishes.map(function (el) {
+  {
+    return el.cuisine;
+  }
+});
+console.log(cuisineList);
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
-
+// let dupCuisineList = dishes.filter((c, index) => {
+//   return dishes.cuisine.indexOf(c) !== index;
+// });
+// console.log(dupCuisineList);
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map
 
-//8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
+let dishMaker = dishes.map(function (el) {
+  return el.cuisine + " " + el.name;
+});
+console.log(dishMaker);
+
+//8. Create a function that will append the cuisine type to the start of the dish's name. 
+// Then, return only the Vegetarian dish objects. So this function should return objects 
+// 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
+
+
 
 //BONUS
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
