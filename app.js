@@ -256,6 +256,17 @@ console.log(
 //9. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+// function problemNine() {
+//   let index = ingredients.indexOf("chickpea");
+//   {
+//     if (index == "chickpea") {
+//       return el.name;
+//     }
+//   }
+//   return index;
+// }
+// let problemNineResult = problemNine();
+// console.log("Dishes that contain Chickpea:", problemNineResult);
 
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
